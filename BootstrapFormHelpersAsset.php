@@ -18,7 +18,7 @@ use yii\web\AssetBundle;
  */
 class BootstrapFormHelpersAsset extends AssetBundle
 {
-    public $sourcePath = '@common/extensions/formhelpers/assets';
+    public $sourcePath = '@vendor/2amigos/yii2-bootstrap-form-helpers-library/assets';
 
     public $depends = [
         'yii\bootstrap\BootstrapPluginAsset'
