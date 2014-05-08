@@ -47,12 +47,12 @@ class CountryPicker extends InputWidget
     public function init()
     {
         Html::addCssClass($this->options, 'bfh-countries');
+        if (ArrayHelper::getValue($this->clientOptions, 'flags') && !$this->selectBox) {
+            $this->selectBox = true;
+        }
         parent::init();
         if (!isset($this->options['data-country'])) {
             $this->options['data-country'] = ArrayHelper::remove($this->options, 'data-value');
-        }
-        if (ArrayHelper::getValue($this->clientOptions, 'flags') && !$this->selectBox) {
-            $this->selectBox = true;
         }
         unset($this->options['data-name'], $this->options['data-value']);
     }
